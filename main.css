@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+HK:400,500,700&display=swap');
+
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: boder-box;
+}
+
+body {
+    background-color: #24272E;
+    font-family: 'Noto Sans HK', sans-serif;
+    color: white;
+}
+
+header {
+    background: whitesmoke;
+    padding: 1em;
+}
+
+header h1 {
+    color: #24272e;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.badge {
+    background-color: #E2584D;
+    font-size: 14px;
+    padding: 5px 10px;
+    box-shadow: 2px 3px 4px black;
+}
+
+#userlabel {
+    position: absolute;
+    bottom: -15px;
+    left: -28px;
+}
+
+#computerlabel {
+    position: absolute;
+    bottom: -15px;
+    right: -45px;
+}
+
+.result {
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.choices {
+    margin: 50px 0;
+    text-align: center;
+}
+
+.choice {
+    display: inline-block;
+    margin: 0 10px;
+    transition: all 0.2s ease;
+    border: 3px solid white;
+    border-radius: 50%;
+}
+
+.choice:hover {
+    cursor: pointer;
+    background: #fff;
+}
+
+img {
+    border: 3px solid white;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+#message {
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.green-glow {
+    border: 3px solid #4dcc7d;
+    box-shadow: 0 0 10px #31b43a;
+}
+
+.red-glow {
+    border: 3px solid #fc121b;
+    box-shadow: 0 0 10px #d01115;
+}
+
+.gray-glow {
+    border: 3px solid #464647;
+    box-shadow: 0 0 10px #25292b;
+}
+
+.scoreboard {
+    width: 250px;
+    margin: 40px auto;
+    padding: 20px 20px;
+    border: 3px solid white;
+    border-radius: 3px;
+    font-size: 46px;
+    text-align: center;
+    position: relative;
+}
