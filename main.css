@@ -4,23 +4,26 @@ body, html {
     margin: 0;
     padding: 0;
     box-sizing: boder-box;
+    height: 100%;
 }
 
 body {
-    background-color: #24272E;
+    background-image: linear-gradient(rgb(73, 118, 202), rgb(189, 10, 135));
     font-family: 'Noto Sans HK', sans-serif;
     color: white;
 }
 
 header {
-    background: whitesmoke;
+    background: rgb(10, 10, 100);
     padding: 1em;
+    box-shadow: 3px 3px 7px #333;
 }
 
 header h1 {
-    color: #24272e;
+    color: whitesmoke;
     text-align: center;
     letter-spacing: 2px;
+    text-shadow: 2px 2px 6px #25292b;
 }
 
 .badge {
@@ -98,7 +101,7 @@ img {
     margin: 40px auto;
     padding: 20px 20px;
     border: 3px solid white;
-    border-radius: 3px;
+    border-radius: 8px;
     font-size: 46px;
     text-align: center;
     position: relative;

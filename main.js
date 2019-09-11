@@ -19,9 +19,9 @@ function compChoice() {
 // console.log(compChoice())
 
 function convertCase(word) {
-    if (word === 'rock') return 'Rock';
-    if (word === 'paper') return 'Paper';
-    if (word === 'scissors') return 'Scissors';
+    if (word === 'rock') return 'Mountain';
+    if (word === 'paper') return 'Trees';
+    if (word === 'scissors') return 'Chainsaws';
 }
 
 function win(user, computer) {
