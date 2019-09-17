@@ -1,3 +1,4 @@
+// initialize user and computer scores to 0; global variables
 let userScore = 0;
 let compScore = 0;
 
@@ -11,6 +12,7 @@ const paper_div = document.getElementById('paper');
 const scissors_div = document.getElementById('scissors');
 
 
+// random pick from computer
 function compChoice() {
     const choices = ['rock', 'paper', 'scissors'];
     let random = Math.floor(Math.random() * 3);
@@ -18,12 +20,15 @@ function compChoice() {
 }
 // console.log(compChoice())
 
+// translate rock, paper, scissors to Mountain, Trees, Chainsaws
+// redundant function...mostly for fun
 function convertCase(word) {
     if (word === 'rock') return 'Mountain';
     if (word === 'paper') return 'Trees';
     if (word === 'scissors') return 'Chainsaws';
 }
 
+// behavior for user win
 function win(user, computer) {
     userScore++;
     userScore_span.innerHTML = userScore;
@@ -34,6 +39,7 @@ function win(user, computer) {
     setTimeout(() => document.getElementById(user).classList.remove('green-glow'), 500);
 }
 
+// behavior for user loss
 function lose(user, computer) {
     compScore++;
     compScore_span.innerHTML = compScore;
@@ -43,12 +49,14 @@ function lose(user, computer) {
     setTimeout(() => document.getElementById(user).classList.remove('red-glow'), 500);
 }
 
+// behavior for tie
 function tie(user, computer) {
     result_p.innerHTML = `Your opponent chose the same.\nTie!`;
     document.getElementById(user).classList.add('gray-glow');
     setTimeout(() => document.getElementById(user).classList.remove('gray-glow'), 500);
 }
 
+// logic for evaluating win, loss, tie
 function game(userChoice) {
     let computerChoice = compChoice();
     switch (userChoice + computerChoice) {
@@ -72,6 +80,7 @@ function game(userChoice) {
     console.log('You have chosen ' + userChoice);
 }
 
+// function to run the game
 function main () {
     // event listeners in ES6 arrow function format
     rock_div.addEventListener('click', () => game('rock'));
