@@ -60,12 +60,14 @@ function tie(user, computer) {
 
 // reset scores to zero
 function reset_game() {
-    userScore = 0;
-    compScore = 0;
-    userScore_span.innerHTML = userScore;
-    compScore_span.innerHTML = compScore;
-    result_p.innerHTML = 'Score reset!';
-    setTimeout(() => intro.innerHTML = 'Let\'s play again!', 3000);
+    if (userScore != 0 && compScore != 0) {
+        userScore = 0;
+        compScore = 0;
+        userScore_span.innerHTML = userScore;
+        compScore_span.innerHTML = compScore;
+        result_p.innerHTML = 'Score reset!';
+        setTimeout(() => intro.innerHTML = 'Let\'s play again!', 3000);
+    }
 }
 
 // logic for evaluating win, loss, tie
