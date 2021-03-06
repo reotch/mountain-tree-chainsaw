@@ -15,7 +15,7 @@ body {
 
 header {
     background: rgb(10, 10, 100);
-    padding: 1em;
+    padding: 0.5em;
     box-shadow: 3px 3px 7px #333;
 }
 
@@ -24,6 +24,11 @@ header h1 {
     text-align: center;
     letter-spacing: 2px;
     text-shadow: 2px 2px 6px #25292b;
+}
+
+.container {
+    width: 70%;
+    margin: 0 auto;
 }
 
 .badge {
@@ -52,7 +57,7 @@ header h1 {
 }
 
 .choices {
-    margin: 50px 0;
+    margin: 30px 0 10px 0;
     text-align: center;
 }
 
@@ -73,6 +78,24 @@ img {
     border: 3px solid white;
     border-radius: 50%;
     vertical-align: middle;
+}
+
+#instructions {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+#reset-btn {
+    width: 110px;
+    margin: 5 auto;
+    padding: 7px;
+    background-color: #3d85c6;
+    color: white;
+    font-weight: bolder;
+    border: 1px solid darkslategray;
+    border-radius: 5px;
+    box-shadow: 2px 2px 3px black;
 }
 
 #message {
