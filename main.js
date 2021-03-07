@@ -6,7 +6,6 @@ let compScore = 0;
 const userScore_span = document.getElementById('userscore');
 const compScore_span = document.getElementById('computerscore');
 const scoreboard_div = document.querySelector('.scoreboard');
-const intro = document.getElementById('intro');
 const result_p = document.querySelector('.result > p');
 const rock_div = document.getElementById('rock');
 const paper_div = document.getElementById('paper');
@@ -60,14 +59,15 @@ function tie(user, computer) {
 
 // reset scores to zero
 function reset_game() {
-    if (userScore != 0 && compScore != 0) {
+    if (userScore != 0 || compScore != 0) {
         userScore = 0;
         compScore = 0;
         userScore_span.innerHTML = userScore;
         compScore_span.innerHTML = compScore;
         result_p.innerHTML = 'Score reset!';
-        setTimeout(() => intro.innerHTML = 'Let\'s play again!', 3000);
-    }
+        setTimeout(() => result_p.innerHTML = 'Let\'s play again!', 1200);
+    } 
+    console.log('You have reset the score')
 }
 
 // logic for evaluating win, loss, tie
