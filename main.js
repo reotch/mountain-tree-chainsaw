@@ -64,8 +64,8 @@ function reset_game() {
         compScore = 0;
         userScore_span.innerHTML = userScore;
         compScore_span.innerHTML = compScore;
-        result_p.innerHTML = 'Score reset!';
-        setTimeout(() => result_p.innerHTML = 'Let\'s play again!', 1200);
+        result_p.innerHTML = 'Score<br>reset! ';
+        setTimeout(() => result_p.innerHTML = 'Let\'s play<br>again! ', 1200);
     } 
     console.log('You have reset the score')
 }
