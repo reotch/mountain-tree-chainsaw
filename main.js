@@ -34,7 +34,7 @@ function win(user, computer) {
     userScore++;
     userScore_span.innerHTML = userScore;
     compScore_span.innerHTML = compScore;
-    result_p.innerHTML = `${convertCase(user)} beats ${convertCase(computer)}.\nYou win!`;
+    result_p.innerHTML = `${convertCase(user)} beats ${convertCase(computer)}<br>You win!`;
     // add class of .green-glow to whatever the winning choice is
     document.getElementById(user).classList.add('green-glow');
     setTimeout(() => document.getElementById(user).classList.remove('green-glow'), 500);
@@ -45,14 +45,14 @@ function lose(user, computer) {
     compScore++;
     compScore_span.innerHTML = compScore;
     userScore_span.innerHTML = userScore;
-    result_p.innerHTML = `Your opponent chose ${convertCase(computer)}.\nYou lose!`;
+    result_p.innerHTML = `Your opponent chose ${convertCase(computer)}<br>You lose!`;
     document.getElementById(user).classList.add('red-glow');
     setTimeout(() => document.getElementById(user).classList.remove('red-glow'), 500);
 }
 
 // behavior for tie
 function tie(user, computer) {
-    result_p.innerHTML = `Your opponent chose the same.\nTie!`;
+    result_p.innerHTML = `Your opponent chose the same<br>Tie!`;
     document.getElementById(user).classList.add('gray-glow');
     setTimeout(() => document.getElementById(user).classList.remove('gray-glow'), 500);
 }
